@@ -476,6 +476,8 @@
                 
                 If the sentence is grammatically correct but does not use the Present Perfect tense, state: "Your sentence is <strong>Correct</strong>.<br><br>This sentence is grammatically correct but does not use the Present Perfect tense."
                 
+                Ensure all bolding uses <strong> tags and avoid asterisks for bolding.
+                
                 Sentence: "${sentence}"`;
 
                 let chatHistory = [];
@@ -525,7 +527,8 @@
                 // MODIFIED PROMPT FOR PURE HTML OUTPUT AND IMPROVED SENTENCE FORMATTING
                 const prompt = `For the English verb "${verb}", provide a simple HTML table with its Base Form, Past Simple, and Past Participle.
                 
-                After the table, generate three example sentences using the Past Participle of "${verb}" in the Present Perfect tense, specifically one for each of these uses:
+                After the table, add a <p> tag with "<strong>Example Sentences (using Present Perfect):</strong></p>" then a <br><br> for a paragraph break.
+                Then, generate three example sentences using the Past Participle of "${verb}" in the Present Perfect tense, specifically one for each of these uses, each on a new line using <p> tags for each sentence:
                 1. Unfinished time period (e.g., "this week", "today")
                 2. Action started in the past, continuing now (e.g., "for X years", "since YYYY")
                 3. Unspecified time / recent event (e.g., "already", "ever", "never", "just")
@@ -554,12 +557,11 @@
                     </tr>
                   </tbody>
                 </table>
+                <br><br> <!-- Paragraph break -->
                 <p><strong>Example Sentences (using Present Perfect):</strong></p>
-                <ul>
-                  <li><strong>Unfinished time:</strong> [Sentence with <strong>bold past participle</strong> and <u>underlined time expression</u>].</li>
-                  <li><strong>Started in the past, continues until now:</strong> [Sentence with <strong>bold past participle</strong> and <u>underlined time expression</u>].</li>
-                  <li><strong>Unspecified time / recent events:</strong> [Sentence with <strong>bold past participle</strong> and <u>underlined time expression</u>].</li>
-                </ul>
+                <p><strong>Unfinished time:</strong> [Sentence with <strong>bold past participle</strong> and <u>underlined time expression</u>].</p>
+                <p><strong>Started in the past, continues until now:</strong> [Sentence with <strong>bold past participle</strong> and <u>underlined time expression</u>].</p>
+                <p><strong>Unspecified time / recent events:</strong> [Sentence with <strong>bold past participle</strong> and <u>underlined time expression</u>].</p>
                 `;
 
                 let chatHistory = [];

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding The Present Perfect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 0;
+            max-height: 0;
+        }
+        .error-text {
+            text-decoration: line-through;
+            color: #EF4444;
+        }
+        .correction-text {
+            color: #22C55E;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-[#8E24AA] mb-2">Mastering The Present Perfect</h1>
+            <p class="text-lg md:text-xl text-gray-600">Connecting the Past to the Present</p>
+        </header>
+
+        <main>
+            <section id="introduction" class="mb-16">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-[#D81B60] mb-4">What is The Present Perfect?</h2>
+                    <p id="presentPerfectExplanation" class="text-gray-700 leading-relaxed mb-4">The Present Perfect is a special English tense that helps us talk about things that happened in the past but are still important <strong>now</strong>. It connects a past action or experience to the present moment.</p>
+                    <button id="simplifyExplanationBtn" class="bg-[#F4511E] hover:bg-[#FB8C00] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300">
+                        ✨ Explain Simply
+                    </button>
+                    <p id="simplifiedExplanation" class="text-gray-700 mt-4 leading-relaxed hidden"></p>
+                </div>
+            </section>
+
+            <section id="real_life_uses" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">When Do We Use It in Real Life?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-[#F4511E]">👋</div>
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-2">Catching Up with Friends</h3>
+                        <p class="text-gray-700 mb-4">When you haven't seen someone for a while and want to know about their recent experiences or activities.</p>
+                        <p class="font-semibold text-[#8E24AA]">"What <strong>have you been up to</strong> recently?"</p>
+                        <p class="font-semibold text-[#8E24AA]">"<strong>Have you done</strong> anything fun this week?"</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-[#FB8C00]">🌍</div>
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-2">Talking About Life Experiences</h3>
+                        <p class="text-gray-700 mb-4">When discussing things you've done or places you've visited at any point in your life, without specifying the exact time.</p>
+                        <p class="font-semibold text-[#8E24AA]">"<strong>Have you ever tried</strong> Turkish coffee?"</p>
+                        <p class="font-semibold text-[#8E24AA]">"I've <strong>never seen</strong> snow before."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-[#FDD835]">✅</div>
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-2">Reporting Recent News or Achievements</h3>
+                        <p class="text-gray-700 mb-4">When talking about something that happened very recently, and the result is still important now.</p>
+                        <p class="font-semibold text-[#8E24AA]">"I've <strong>just finished</strong> my homework!"</p>
+                        <p class="font-semibold text-[#8E24AA]">"The new restaurant <strong>has opened</strong>."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-[#8E24AA]">⏳</div>
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-2">Describing Ongoing Situations</h3>
+                        <p class="text-gray-700 mb-4">When talking about a situation or action that started in the past and is still continuing up to the present moment.</p>
+                        <p class="font-semibold text-[#8E24AA]">"I've <strong>lived</strong> in London for three years."</p>
+                        <p class="font-semibold text-[#8E24AA]">"She's <strong>studied</strong> English since last year."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-[#D81B60]">📈</div>
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-2">Talking About Changes Over Time</h3>
+                        <p class="text-gray-700 mb-4">When discussing how something has evolved or changed from the past up to the present.</p>
+                        <p class="font-semibold text-[#8E24AA]">"London <strong>has changed</strong> a lot since I arrived."</p>
+                        <p class="font-semibold text-[#8E24AA]">"My English <strong>has improved</strong> a lot this year."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-[#F4511E]">🚨</div>
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-2">Explaining a Current Situation/Result</h3>
+                        <p class="text-gray-700 mb-4">When a past action has a direct, visible result or consequence in the present.</p>
+                        <p class="font-semibold text-[#8E24AA]">"I can't come to the party, I've <strong>broken</strong> my leg."</p>
+                        <p class="font-semibold text-[#8E24AA]">"I've <strong>lost</strong> my keys, so I can't get in."</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="form" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">1. How to Form It (The Structure)</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+                    <p class="text-gray-700 mb-6 text-center">We build the Present Perfect using two main parts:</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="text-xl font-bold text-[#D81B60] mb-2">HAVE / HAS</div>
+                            <p class="text-sm text-gray-600">(Auxiliary Verb)</p>
+                            <p class="text-xs text-gray-500 mt-1">I / You / We / They <span class="font-bold">HAVE</span></p>
+                            <p class="text-xs text-gray-500">He / She / It <span class="font-bold">HAS</span></p>
+                        </div>
+                        <div class="text-4xl font-black text-gray-400">+</div>
+                        <div class="flex flex-col items-center">
+                            <div class="text-xl font-bold text-[#F4511E] mb-2">PAST PARTICIPLE</div>
+                            <p class="text-sm text-gray-600">(Main Verb Form)</p>
+                            <p class="text-xs text-gray-500 mt-1">e.g., <span class="font-bold">lived, seen, eaten, played</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-lg font-semibold text-gray-800 mb-2">Putting it together:</p>
+                        <p class="text-xl font-bold text-[#8E24AA]">I <span class="text-[#D81B60]">have</span> <span class="text-[#F4511E]">lived</span> in London.</p>
+                        <p class="text-xl font-bold text-[#8E24AA]">She <span class="text-[#D81B60]">has</span> <span class="text-[#F4511E]">seen</span> that movie.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="uses" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">2. When to Use It (Common Situations)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-4">A. For Experiences in Your Life</h3>
+                        <p class="text-gray-700 mb-4">Use the Present Perfect to talk about things you have done or experienced at <strong>any</strong> point in your life, when the exact time is <strong>not important or not mentioned.</strong></p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                            <li><strong>Keywords:</strong> `ever` (in questions), `never` (for no experience)</li>
+                            <li><strong>Structure:</strong> Subject + has/have + past participle.</li>
+                            <li><strong>Example:</strong> <span class="font-semibold text-[#8E24AA]">I have eaten already. (action)</span></li>
+                            <li><strong>Example:</strong> <span class="font-semibold text-[#8E24AA]">I have been very sick recently. (state)</span></li>
+                        </ul>
+                        <img src="https://i.imgur.com/BSz9V6b.png" alt="Present Perfect Unspecified Time Timeline" class="w-full max-w-xs md:max-w-sm mx-auto rounded-lg shadow-md mt-4">
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#F4511E] mb-4">B. For Actions Started in the Past, Continuing Now</h3>
+                        <p class="text-gray-700 mb-4">Use the Present Perfect for actions or states that began in the past and are <b>still continuing</b> up to the present moment.</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                            <li><strong>Keywords:</strong> `for` (duration), `since` (starting point)</li>
+                            <li><strong>Structure:</strong> Subject + has/have + past participle + for / since (duration).</li>
+                            <li><strong>Example:</strong> <span class="font-semibold text-[#8E24AA]">I have lived in London since 2016. (action)</span></li>
+                            <li><strong>Example:</strong> <span class="font-semibold text-[#8E24AA]">We have been married for 5 years. (state)</span></li>
+                        </ul>
+                        <img src="https://i.imgur.com/t1NTPia.png" alt="Present Perfect Started in Past, Continues to Now Timeline" class="w-full max-w-xs md:max-w-sm mx-auto rounded-lg shadow-md mt-4">
+                    </div>
+                     <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#FB8C00] mb-4">C. For Actions in an Unfinished Time Period</h3>
+                        <p class="text-gray-700 font-normal mb-4">Use the Present Perfect for actions that happened within a <strong class="font-bold">time period that is not yet finished</strong> (e.g., today, this week, this month, this year).</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                            <li><strong>Keywords:</strong> `this week`, `this month`, `this year`, `today` (unfinished times)</li>
+                            <li><strong>Structure:</strong> Subject + has/have + past participle + unfinished time.</li>
+                            <li><strong>Example:</strong> <span class="font-semibold text-[#8E24AA]">I’ve eaten pizza twice this week.</span></li>
+                            <li><strong>Example:</strong> <span class="font-semibold text-[#8E24AA]">I have been very busy today.</span></li>
+                        </ul>
+                        <img src="https://i.imgur.com/iAL0YsZ.png" alt="Present Perfect Unfinished Time Timeline" class="w-full max-w-xs md:max-w-sm mx-auto rounded-lg shadow-md mt-4">
+                    </div>
+                </div>
+            </section>
+
+            <section id="contrast" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">3. Present Perfect vs. Past Simple (Quick Look)</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
+                    <p class="text-gray-700 mb-6 text-center">The key difference is whether the time is finished or not.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center mb-6">
+                        <div class="p-4 bg-purple-100 rounded-lg">
+                            <h3 class="text-xl font-bold text-purple-800 mb-2">Present Perfect</h3>
+                            <p class="text-gray-700 mb-2">For actions in an <strong>UNFINISHED</strong> time period.</p>
+                            <p class="font-semibold text-[#8E24AA]">I <span class="text-[#D81B60]">have eaten</span> sushi. <br class="md:hidden">(Sometime in my life, time is not specific/finished)</p>
+                        </div>
+                        <div class="p-4 bg-pink-100 rounded-lg">
+                            <h3 class="text-xl font-bold text-pink-800 mb-2">Past Simple</h3>
+                            <p class="text-gray-700 mb-2">For actions in a <strong>FINISHED</strong> time period.</p>
+                            <p class="font-semibold text-[#D81B60]">I <span class="text-[#F4511E]">ate</span> sushi yesterday. <br class="md:hidden">(Yesterday is a finished time)</p>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4 text-left mx-auto max-w-md">
+                        <li><strong>Structure:</strong> Subject + past simple + finished time.</li>
+                        <li><strong>Example:</strong> <span class="font-semibold text-[#D81B60]">I surfed in Hawaii in 2012.</span></li>
+                    </ul>
+                    <img src="https://i.imgur.com/sI5KsMI.png" alt="Past Simple Timeline" class="w-full max-w-sm md:max-w-md mx-auto rounded-lg shadow-md mt-4">
+
+                    <h3 class="text-xl font-bold text-[#8E24AA] mt-8 mb-4">Quick Tip: Think "Time"</h3>
+                    <p class="text-gray-700 mb-4">
+                        When choosing between Present Perfect and Past Simple, ask yourself:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6 text-left mx-auto max-w-md">
+                        <li>Is the <strong>time period</strong> of the action <strong>finished</strong>? Use <strong>Past Simple</strong>. (e.g., *yesterday, last year, in 2012*)</li>
+                        <li>Is the <strong>time period</strong> of the action <strong>unfinished</strong>? Use <strong>Present Perfect</strong>. (e.g., *today, this week, since 2016*)</li>
+                        <li>Is the <strong>exact time</strong> of the action <strong>unimportant or unknown</strong>? Use <strong>Present Perfect</strong>. (e.g., *Have you ever...*, *I've already...*)</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-[#8E24AA] mt-8 mb-4">Conversation Flow: Perfect to Simple</h3>
+                    <p class="text-gray-700 mb-4">
+                        In real conversations, we often <strong>start</strong> with a general question using the <strong><u>Present Perfect</u></strong> about an experience. Then, if we want to know <strong>more specific details</strong>, we switch to the <strong><u>Past Simple</u></strong>.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded-lg text-left max-w-md mx-auto">
+                        <p class="text-gray-800 mb-2"><strong>You:</strong> <span class="font-semibold text-[#D81B60]">Have you ever visited Turkey?</span> (Present Perfect - general experience)</p>
+                        <p class="text-gray-800 mb-2"><strong>Kubilay:</strong> Yes, I have.</p>
+                        <p class="text-gray-800 mb-2"><strong>You:</strong> Oh, really? <span class="font-semibold text-[#F4511E]">When did you go?</span> (Past Simple - specific time)</p>
+                        <p class="text-gray-800 mb-2"><strong>Kubilay:</strong> I <span class="font-semibold text-[#F4511E]">went</span> in 2018.</p>
+                        <p class="text-gray-800 mb-2"><strong>You:</strong> And <span class="font-semibold text-[#F4511E]">what did you do</span> there?</p>
+                        <p class="text-gray-800"><strong>Kubilay:</strong> I <span class="font-semibold text-[#F4511E]">visited</span> Istanbul and <span class="font-semibold text-[#F4511E]">ate</span> a lot of delicious food.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="past_participle_explanation" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">What is a Past Participle?</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+                    <p class="text-gray-700 mb-4">The <strong>Past Participle</strong> is the third form of a verb. It's used to create perfect tenses (like the Present Perfect) and passive voice.</p>
+                    <p class="text-gray-700 mb-4">Think of it like this:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li><strong>Base Form:</strong> The original verb (e.g., `eat`, `go`, `see`).</li>
+                        <li><strong>Past Simple:</strong> The form used for finished actions at a finished time (e.g., `ate`, `went`, `saw`).</li>
+                        <li><strong>Past Participle:</strong> The form used with 'have/has' for perfect tenses (e.g., `eaten`, `gone`, `seen`).</li>
+                    </ul>
+                    <p class="text-gray-700 mb-4">You need the Past Participle when you use <strong>HAVE</strong> or <strong>HAS</strong> to form the Present Perfect.</p>
+                    <p class="text-gray-700 mb-2"><strong>Examples:</strong></p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>I have <strong>eaten</strong> sushi. (NOT "I have ate sushi.")</li>
+                        <li>She has <strong>gone</strong> to the shop. (NOT "She has went to the shop.")</li>
+                        <li>We have <strong>seen</strong> that movie. (NOT "We have saw that movie.")</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="verbs" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">4. Essential Verbs: Past Participles</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8 max-w-xl mx-auto">
+                    <p class="text-gray-700 mb-6 text-center">Many common verbs have a special 'Past Participle' form. You need to learn these!</p>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                            <thead class="bg-[#FDD835] text-gray-900">
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Base Form</th>
+                                    <th class="py-2 px-4 border-b">Past Simple</th>
+                                    <th class="py-2 px-4 border-b">Past Participle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 px-4 border-b">be</td>
+                                    <td class="py-2 px-4 border-b">was/were</td>
+                                    <td class="py-2 px-4 border-b">been</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-gray-100">
+                                    <td class="py-2 px-4 border-b">do</td>
+                                    <td class="py-2 px-4 border-b">did</td>
+                                    <td class="py-2 px-4 border-b">done</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 px-4 border-b">eat</td>
+                                    <td class="py-2 px-4 border-b">ate</td>
+                                    <td class="py-2 px-4 border-b">eaten</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-gray-100">
+                                    <td class="py-2 px-4 border-b">go</td>
+                                    <td class="py-2 px-4 border-b">went</td>
+                                    <td class="py-2 px-4 border-b">gone</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 px-4 border-b">have</td>
+                                    <td class="py-2 px-4 border-b">had</td>
+                                    <td class="py-2 px-4 border-b">had</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-gray-100">
+                                    <td class="py-2 px-4 border-b">make</td>
+                                    <td class="py-2 px-4 border-b">made</td>
+                                    <td class="py-2 px-4 border-b">made</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 px-4 border-b">meet</td>
+                                    <td class="py-2 px-4 border-b">met</td>
+                                    <td class="py-2 px-4 border-b">met</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-gray-100">
+                                    <td class="py-2 px-4 border-b">read</td>
+                                    <td class="py-2 px-4 border-b">read</td>
+                                    <td class="py-2 px-4 border-b">read</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-2 px-4 border-b">see</td>
+                                    <td class="py-2 px-4 border-b">saw</td>
+                                    <td class="py-2 px-4 border-b">seen</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 bg-gray-100">
+                                    <td class="py-2 px-4">drink</td>
+                                    <td class="py-2 px-4">drank</td>
+                                    <td class="py-2 px-4">drunk</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-[#8E24AA] mt-8 mb-4">Common Errors & Corrections</h3>
+                    <p class="text-gray-700 mb-4">It's easy to confuse the Past Simple and Past Participle forms. Here's how to fix common mistakes:</p>
+
+                    <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <p class="text-gray-800 mb-2"><strong>Incorrect:</strong> I have <span class="error-text">ate</span> pizza twice this week.</p>
+                        <p class="text-gray-800"><strong>Correct:</strong> I have <span class="correction-text">eaten</span> pizza twice this week.</p>
+                        <p class="text-sm text-gray-600 mt-2"><strong>Reason:</strong> With 'have/has', always use the Past Participle form of the verb.</p>
+                    </div>
+
+                    <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <p class="text-gray-800 mb-2"><strong>Incorrect:</strong> She has <span class="error-text">saw</span> that movie.</p>
+                        <p class="text-gray-800"><strong>Correct:</strong> She has <span class="correction-text">seen</span> that movie.</p>
+                        <p class="text-sm text-gray-600 mt-2"><strong>Reason:</strong> 'Seen' is the Past Participle of 'see'.</p>
+                    </div>
+
+                    <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                        <p class="text-gray-800 mb-2"><strong>Incorrect:</strong> He has <span class="error-text">went</span> to London.</p>
+                        <p class="text-gray-800"><strong>Correct:</strong> He has <span class="correction-text">gone</span> to London.</p>
+                        <p class="text-sm text-gray-600 mt-2"><strong>Reason:</strong> 'Gone' is the Past Participle of 'go'.</p>
+                    </div>
+
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <p class="text-gray-800 mb-2"><strong>Incorrect:</strong> We have <span class="error-text">did</span> our homework.</p>
+                        <p class="text-gray-800"><strong>Correct:</strong> We have <span class="correction-text">done</span> our homework.</p>
+                        <p class="text-sm text-gray-600 mt-2"><strong>Reason:</strong> 'Done' is the Past Participle of 'do'.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="gemini_features" class="mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">✨ Practice with AI ✨</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-bold text-[#D81B60] mb-4">Check My Sentence ✨</h3>
+                    <p class="text-gray-700 mb-4">Type a sentence using the Present Perfect below, and I'll give you feedback!</p>
+                    <textarea id="sentenceInput" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#FB8C00]" rows="3" placeholder="e.g., I have visit London."></textarea>
+                    <button id="checkSentenceBtn" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300">
+                        Check Sentence
+                    </button>
+                    <div id="feedbackOutput" class="mt-4 p-4 bg-gray-100 rounded-lg hidden">
+                        <p class="text-gray-800 font-semibold mb-2">Feedback:</p>
+                        <p id="feedbackText" class="text-gray-700"></p>
+                    </div>
+                    <div id="loadingIndicator" class="mt-4 text-center hidden">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#8E24AA] mx-auto"></div>
+                        <p class="text-gray-600 mt-2">Thinking...</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">Practice makes perfect! Keep using these forms in your conversations.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const simplifyExplanationBtn = document.getElementById('simplifyExplanationBtn');
+            const presentPerfectExplanation = document.getElementById('presentPerfectExplanation');
+            const simplifiedExplanation = document.getElementById('simplifiedExplanation');
+            const sentenceInput = document.getElementById('sentenceInput');
+            const checkSentenceBtn = document.getElementById('checkSentenceBtn');
+            const feedbackOutput = document.getElementById('feedbackOutput');
+            const feedbackText = document.getElementById('feedbackText');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+
+            simplifyExplanationBtn.addEventListener('click', async function() {
+                loadingIndicator.classList.remove('hidden');
+                simplifiedExplanation.classList.add('hidden');
+                const originalText = presentPerfectExplanation.textContent;
+                const prompt = `Explain the following text about Present Perfect in simpler terms, suitable for an A2/B1 English learner. Keep it very concise and easy to understand:\n\n"${originalText}"`;
+
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        simplifiedExplanation.textContent = text;
+                        simplifiedExplanation.classList.remove('hidden');
+                    } else {
+                        simplifiedExplanation.textContent = "Sorry, I couldn't simplify that right now. Please try again.";
+                        simplifiedExplanation.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    simplifiedExplanation.textContent = "An error occurred while simplifying. Please check your connection and try again.";
+                    simplifiedExplanation.classList.remove('hidden');
+                } finally {
+                    loadingIndicator.classList.add('hidden');
+                }
+            });
+
+            checkSentenceBtn.addEventListener('click', async function() {
+                const sentence = sentenceInput.value.trim();
+                if (!sentence) {
+                    feedbackText.textContent = "Please enter a sentence to check.";
+                    feedbackOutput.classList.remove('hidden');
+                    return;
+                }
+
+                loadingIndicator.classList.remove('hidden');
+                feedbackOutput.classList.add('hidden');
+
+                const prompt = `Analyze the following English sentence. If it uses the Present Perfect tense, check its grammatical correctness (form and common usage). Provide feedback in simple terms for an A2/B1 learner. If incorrect, suggest a correction. If it's not Present Perfect, just say "This sentence is grammatically correct but does not use the Present Perfect tense."
+                Sentence: "${sentence}"`;
+
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        feedbackText.textContent = text;
+                        feedbackOutput.classList.remove('hidden');
+                    } else {
+                        feedbackText.textContent = "Sorry, I couldn't check your sentence right now. Please try again.";
+                        feedbackOutput.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    feedbackText.textContent = "An error occurred while checking. Please check your connection and try again.";
+                    feedbackOutput.classList.remove('hidden');
+                } finally {
+                    loadingIndicator.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

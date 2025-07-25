@@ -419,7 +419,18 @@
                 loadingIndicator.classList.remove('hidden');
                 feedbackOutput.classList.add('hidden');
 
-                const prompt = `Analyze the following English sentence. If it uses the Present Perfect tense, check its grammatical correctness (form and common usage). Provide feedback in simple terms for an A2/B1 learner. If incorrect, suggest a correction. If it's not Present Perfect, just say "This sentence is grammatically correct but does not use the Present Perfect tense."
+                // MODIFIED PROMPT FOR BETTER FORMATTING
+                const prompt = `Analyze the following English sentence for Present Perfect tense usage. Provide feedback for an A2/B1 learner.
+                
+                Structure your response using HTML tags for bold (<strong>) and line breaks (<br>):
+                
+                1. Start with: "Your sentence is <strong>[Correct/Incorrect]</strong>.<br><br>"
+                2. If incorrect, explain "<strong>Why it's not correct:</strong> [Your explanation here, use <strong> for key terms].<br><br>"
+                3. If incorrect, provide "<strong>Correction:</strong> [Corrected sentence here].<br><br>"
+                4. Add a brief, simple explanation of the corrected sentence's meaning or the rule applied.
+                
+                If the sentence is grammatically correct but does not use the Present Perfect tense, state: "This sentence is grammatically correct but does not use the Present Perfect tense."
+                
                 Sentence: "${sentence}"`;
 
                 let chatHistory = [];
@@ -439,7 +450,8 @@
                         result.candidates[0].content && result.candidates[0].content.parts &&
                         result.candidates[0].content.parts.length > 0) {
                         const text = result.candidates[0].content.parts[0].text;
-                        feedbackText.textContent = text;
+                        // Use innerHTML to render the HTML tags from the AI's response
+                        feedbackText.innerHTML = text;
                         feedbackOutput.classList.remove('hidden');
                     } else {
                         feedbackText.textContent = "Sorry, I couldn't check your sentence right now. Please try again.";

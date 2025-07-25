@@ -419,17 +419,20 @@
                 loadingIndicator.classList.remove('hidden');
                 feedbackOutput.classList.add('hidden');
 
-                // MODIFIED PROMPT FOR BETTER FORMATTING
+                // MODIFIED PROMPT FOR BETTER FORMATTING AND HTML TAGS
                 const prompt = `Analyze the following English sentence for Present Perfect tense usage. Provide feedback for an A2/B1 learner.
                 
-                Structure your response using HTML tags for bold (<strong>) and line breaks (<br>):
+                Structure your response using HTML tags for bold (<strong>), line breaks (<br>), red strikethrough (<span class="error-text">...</span>), and green text (<span class="correction-text">...</span>).
                 
                 1. Start with: "Your sentence is <strong>[Correct/Incorrect]</strong>.<br><br>"
-                2. If incorrect, explain "<strong>Why it's not correct:</strong> [Your explanation here, use <strong> for key terms].<br><br>"
-                3. If incorrect, provide "<strong>Correction:</strong> [Corrected sentence here].<br><br>"
-                4. Add a brief, simple explanation of the corrected sentence's meaning or the rule applied.
+                2. If incorrect, show the incorrect sentence with the problematic part marked: "<strong>Original:</strong> [Sentence with <span class="error-text">incorrect_part</span>].<br><br>"
+                3. Then, provide the corrected sentence: "<strong>Correction:</strong> [Sentence with <span class="correction-text">corrected_part</span>].<br><br>"
+                4. Explain "<strong>Why it's not correct:</strong> [Your explanation here, use <strong> for key terms].<br><br>"
+                5. Add a brief, simple explanation of the corrected sentence's meaning or the rule applied.
                 
-                If the sentence is grammatically correct but does not use the Present Perfect tense, state: "This sentence is grammatically correct but does not use the Present Perfect tense."
+                If the sentence is grammatically correct and uses the Present Perfect, state: "Your sentence is <strong>Correct</strong>.<br><br>This sentence correctly uses the Present Perfect tense to [briefly explain why it's correct]."
+                
+                If the sentence is grammatically correct but does not use the Present Perfect tense, state: "Your sentence is <strong>Correct</strong>.<br><br>This sentence is grammatically correct but does not use the Present Perfect tense."
                 
                 Sentence: "${sentence}"`;
 

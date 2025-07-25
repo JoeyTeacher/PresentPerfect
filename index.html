@@ -28,6 +28,24 @@
         .correction-text {
             color: #22C55E;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            border: 1px solid #e2e8f0; /* Tailwind gray-200 */
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #FDD835; /* Yellow-200 */
+            font-weight: bold;
+            color: #4A5568; /* Gray-700 */
+        }
+        tr:nth-child(even) {
+            background-color: #f7fafc; /* Gray-50 */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -331,7 +349,7 @@
 
             <section id="gemini_features" class="mb-16">
                 <h2 class="text-3xl font-bold text-center text-[#8E24AA] mb-8">✨ Practice with AI ✨</h2>
-                <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
                     <h3 class="text-xl font-bold text-[#D81B60] mb-4">Check My Sentence ✨</h3>
                     <p class="text-gray-700 mb-4">Type a sentence using the Present Perfect below, and I'll give you feedback!</p>
                     <textarea id="sentenceInput" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#FB8C00]" rows="3" placeholder="e.g., I have visit London."></textarea>
@@ -345,6 +363,23 @@
                     <div id="loadingIndicator" class="mt-4 text-center hidden">
                         <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#8E24AA] mx-auto"></div>
                         <p class="text-gray-600 mt-2">Thinking...</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-bold text-[#D81B60] mb-4">Past Participle Verb Generator ✨</h3>
+                    <p class="text-gray-700 mb-4">Don't know the past participle of a verb? Write a verb and I'll generate a verb table to help you, plus example sentences!</p>
+                    <input type="text" id="verbInput" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#FB8C00]" placeholder="e.g., go, eat, be">
+                    <button id="generateVerbTableBtn" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300">
+                        Generate Verb Forms
+                    </button>
+                    <div id="verbOutput" class="mt-4 p-4 bg-gray-100 rounded-lg hidden">
+                        <p class="text-gray-800 font-semibold mb-2">Verb Forms & Examples:</p>
+                        <div id="verbTableAndExamples" class="text-gray-700"></div>
+                    </div>
+                    <div id="verbLoadingIndicator" class="mt-4 text-center hidden">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#8E24AA] mx-auto"></div>
+                        <p class="text-gray-600 mt-2">Generating...</p>
                     </div>
                 </div>
             </section>
@@ -370,6 +405,13 @@
             const feedbackOutput = document.getElementById('feedbackOutput');
             const feedbackText = document.getElementById('feedbackText');
             const loadingIndicator = document.getElementById('loadingIndicator');
+
+            const verbInput = document.getElementById('verbInput');
+            const generateVerbTableBtn = document.getElementById('generateVerbTableBtn');
+            const verbOutput = document.getElementById('verbOutput');
+            const verbTableAndExamples = document.getElementById('verbTableAndExamples');
+            const verbLoadingIndicator = document.getElementById('verbLoadingIndicator');
+
 
             simplifyExplanationBtn.addEventListener('click', async function() {
                 loadingIndicator.classList.remove('hidden');
@@ -465,6 +507,77 @@
                     feedbackOutput.classList.remove('hidden');
                 } finally {
                     loadingIndicator.classList.add('hidden');
+                }
+            });
+
+            // New Verb Generator Feature
+            generateVerbTableBtn.addEventListener('click', async function() {
+                const verb = verbInput.value.trim();
+                if (!verb) {
+                    verbTableAndExamples.innerHTML = "Please enter a verb.";
+                    verbOutput.classList.remove('hidden');
+                    return;
+                }
+
+                verbLoadingIndicator.classList.remove('hidden');
+                verbOutput.classList.add('hidden');
+
+                const prompt = `For the English verb "${verb}", provide a simple HTML table with its Base Form, Past Simple, and Past Participle.
+                
+                After the table, generate two example sentences using the Past Participle of "${verb}" in the Present Perfect tense.
+                
+                Format the output as follows:
+                <p><strong>Verb Forms:</strong></p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Base Form</th>
+                      <th>Past Simple</th>
+                      <th>Past Participle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>[Base Form]</td>
+                      <td>[Past Simple]</td>
+                      <td>[Past Participle]</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><strong>Example Sentences (using Present Perfect):</strong></p>
+                <ul>
+                  <li>[Sentence 1]</li>
+                  <li>[Sentence 2]</li>
+                </ul>
+                `;
+
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        verbTableAndExamples.innerHTML = text;
+                        verbOutput.classList.remove('hidden');
+                    } else {
+                        verbTableAndExamples.innerHTML = "Sorry, I couldn't generate verb forms for that. Please try again.";
+                        verbOutput.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    verbTableAndExamples.innerHTML = "An error occurred while generating. Please check your connection and try again.";
+                    verbOutput.classList.remove('hidden');
+                } finally {
+                    verbLoadingIndicator.classList.add('hidden');
                 }
             });
         });

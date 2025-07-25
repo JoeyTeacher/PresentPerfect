@@ -358,8 +358,8 @@
     </div>
 
     <script>
-
-const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU"; // If you want to use models other than gemini-2.0-flash or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+        // Define apiKey globally or at least outside the event listeners
+        const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU"; // Your actual API key should go here
 
         document.addEventListener('DOMContentLoaded', function() {
             const simplifyExplanationBtn = document.getElementById('simplifyExplanationBtn');
@@ -380,7 +380,7 @@ const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU"; // If you want to use 
                 let chatHistory = [];
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                 const payload = { contents: chatHistory };
-                const apiKey = "";
+                // Use the globally defined apiKey
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
                 try {
@@ -425,7 +425,7 @@ const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU"; // If you want to use 
                 let chatHistory = [];
                 chatHistory.push({ role: "user", parts: [{ text: prompt }] });
                 const payload = { contents: chatHistory };
-                const apiKey = "";
+                // Use the globally defined apiKey
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
                 try {

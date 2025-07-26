@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Perfect: Basic Experiences</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for consistent typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for consistent typography */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Styles for error text (strikethrough and red) */
+        .error-text {
+            text-decoration: line-through;
+            color: #EF4444; /* Tailwind red-500 */
+        }
+        /* Styles for correction text (green) */
+        .correction-text {
+            color: #22C55E; /* Tailwind green-500 */
+            font-weight: bold;
+        }
+        /* Styles for correct answers in feedback (green and bold) */
+        .correct-answer {
+            color: #22C55E; /* Tailwind green-500 */
+            font-weight: bold;
+        }
+        /* Styles for incorrect answers in feedback (red and bold) */
+        .incorrect-answer {
+            color: #EF4444; /* Tailwind red-500 */
+            font-weight: bold;
+        }
+        /* General styling for feedback boxes */
+        .feedback-box {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #f3f4f6; /* Tailwind gray-100 */
+        }
+        /* Styling for draggable words (if using actual drag-and-drop later) */
+        .draggable-word {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            margin: 0.25rem;
+            background-color: #E0F2F7; /* Light blue */
+            border: 1px solid #B2EBF2; /* Slightly darker blue */
+            border-radius: 0.375rem;
+            cursor: grab;
+            user-select: none;
+        }
+        .drop-zone {
+            min-height: 3rem;
+            border: 2px dashed #90CAF9; /* Blue */
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        /* Custom colors for tense highlighting */
+        .past-simple-text {
+            color: #2563EB; /* Tailwind blue-600 */
+        }
+        .present-perfect-text {
+            color: #DC2626; /* Tailwind red-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Main container for the page content, centered with responsive padding -->
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- Header section with title and subtitle -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-[#8E24AA] mb-2">Present Perfect: Basic Experiences</h1>
+            <p class="text-lg md:text-xl text-gray-600">Starting your journey with "What have you done?"</p>
+        </header>
+
+        <main>
+            <!-- Introduction section -->
+            <section id="introduction" class="mb-12">
+                <!-- Card-like styling for content blocks -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-[#D81B60] mb-4">Connecting Your Past to Now 👋</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">On this page, we'll focus on one of the most common ways to use the <strong>Present Perfect</strong>: to talk about things you have done or experienced at <strong>any point in your life</strong>, when the <strong>exact time is not important or not mentioned</strong>. It's all about your life journey up to this moment!</p>
+                    <!-- Image updated to a placehold.co URL for reliable embedding -->
+                    <img src="https://imgur.com/BSz9V6b.png" alt="Life Journey Timeline" class="w-full max-w-sm mx-auto rounded-lg shadow-md my-6">
+                    <p class="text-gray-700 leading-relaxed mb-4">Think of it like this: when you're catching up with a friend and they ask, "What have you done recently?" or "Have you ever tried [something new]?", they're not asking for a specific date and time. They want to know about your experiences up until now. The <strong>Present Perfect</strong> is perfect for these kinds of conversations!</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">It's used for actions that started in the past but are still true or have a result now, or for experiences that happened at an unspecified time in your life.</p>
+                    <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
+                        <li>I <strong>have lived</strong> in this city for five years. (Still living here)</li>
+                        <li>She <strong>has visited</strong> Paris many times. (Her experience up to now)</li>
+                        <li>They <strong>have just finished</strong> their project. (Action completed very recently, result is present)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- New Section: Mini Roleplays to show real-life usage -->
+            <section id="mini-roleplays" class="mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-[#F4511E] mb-4">Real-Life Conversations: <strong>Present Perfect</strong> in Action 💬</h2>
+                    <p class="text-gray-700 mb-6">Let's see how the <strong>Present Perfect</strong> is used in everyday chats between friends. Notice how they talk about experiences without giving a specific time.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Roleplay 1 -->
+                        <div class="bg-gray-100 rounded-lg shadow-inner p-6">
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 1: Trying New Foods</h3>
+                            <p class="text-gray-700"><strong>Akin:</strong> "Have you ever tried jellied eel?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hiç jöleli yılan balığı denedin mi?)</em></p>
+                            <p class="text-gray-700"><strong>Kubilay:</strong> "No, I haven't. I've never been brave enough! Have you?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hayır, denemedim. Hiç cesur olamadım! Sen denedin mi?)</em></p>
+                            <p class="text-gray-700"><strong>Akin:</strong> "Yes, I have! I've already tried it twice. It's an old traditional British food. Not many places sell it nowadays. It's... interesting!"</p>
+                            <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Evet, denedim! Hatta iki kez denedim bile. Eski bir geleneksel İngiliz yemeği. Artık pek çok yerde satılmıyor. İlginç bir şey!)</em></p>
+                        </div>
+
+                        <!-- Roleplay 2 -->
+                        <div class="bg-gray-100 rounded-lg shadow-inner p-6">
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 2: Travel Plans</h3>
+                            <p class="text-gray-700"><strong>Coworker 1:</strong> "I'm planning a trip to Japan. Have you been there yet?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Henüz oraya gittin mi?)</em></p>
+                            <p class="text-gray-700"><strong>Coworker 2:</strong> "No, I haven't been to Japan yet, but I really want to go! My brother has already visited Tokyo."</p>
+                            <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Hayır, henüz Japonya'ya gitmedim ama gerçekten gitmek istiyorum! Kardeşim Tokyo'yu zaten ziyaret etti.)</em></p>
+                        </div>
+
+                        <!-- Roleplay 3 -->
+                        <div class="bg-gray-100 rounded-lg shadow-inner p-6">
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 3: Recent Activities</h3>
+                            <p class="text-gray-700"><strong>Roommate 1:</strong> "I've just finished reading an amazing book. Have you read anything good recently?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Harika bir kitabı yeni bitirdim. Son zamanlarda iyi bir şey okudun mu?)</em></p>
+                            <p class="text-gray-700"><strong>Roommate 2:</strong> "Oh, I haven't read much recently. But I've already watched that new series everyone is talking about!"</p>
+                            <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Oh, son zamanlarda pek okumadım. Ama herkesin bahsettiği o yeni diziyi zaten izledim!)</em></p>
+                        </div>
+
+                        <!-- Roleplay 4 (New) -->
+                        <div class="bg-gray-100 rounded-lg shadow-inner p-6">
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 4: Learning New Skills</h3>
+                            <p class="text-gray-700"><strong>Boyfriend:</strong> "Have you ever learned to play a musical instrument?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hiç müzik aleti çalmayı öğrendin mi?)</em></p>
+                            <p class="text-gray-700"><strong>Girlfriend:</strong> "Yes, I have! I've played the guitar for five years."</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Evet, öğrendim! Beş yıldır gitar çalıyorum.)</em></p>
+                            <p class="text-gray-700"><strong>Boyfriend:</strong> "Wow, I had no idea that you were so musical! How come I've never seen you play?"</p>
+                            <p class="text-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Vay canına, bu kadar müzikal olduğunu hiç bilmiyordum! Neden hiç çaldığını görmedim?)</em></p>
+                            <p class="text-gray-700"><strong>Girlfriend:</strong> "I haven't played since I left college."</p>
+                            <p class="text-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Üniversiteden ayrıldığımdan beri çalmadım.)</em></p>
+                            <p class="text-gray-700"><strong>Boyfriend:</strong> "I've always wanted to learn how to play."</p>
+                            <p class="text-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Ben hep çalmayı öğrenmek istemişimdir.)</em></p>
+                            <p class="text-gray-700"><strong>Girlfriend:</strong> "Well, I've never taught anyone before. But, maybe I can teach you. We can play together."</p>
+                            <p class="text-700 text-sm text-gray-500"><em>(Türkçe: Şey, daha önce hiç kimseye öğretmedim. Ama belki sana öğretebilirim. Birlikte çalabiliriz.)</em></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 1: Building Basic Statements -->
+            <section id="basic-statements" class="mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h2 class="text-2xl font-bold text-[#F4511E] mb-4">1. Building Basic Statements</h2>
+                    <p class="text-gray-700 mb-4">To talk about your experiences, we need two main parts: <strong>have/has</strong> and the <strong>Past Participle</strong> of the verb.</p>
+
+                    <!-- NEW BOX: Choosing 'Have' or 'Has' -->
+                    <div class="bg-gray-100 rounded-lg shadow-inner p-6 mb-6">
+                        <h3 class="text-xl font-bold text-[#FB8C00] mb-3">Choosing 'Have' or 'Has' (Subject-Verb Agreement) 🤝</h3>
+                        <p class="text-gray-700 mb-4">It's simple: we use 'have' for some subjects and 'has' for others. This makes sure the verb matches the person or thing you're talking about!</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Table of combinations -->
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-700 mb-2">Remember these pairs:</h4>
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-2 px-4 bg-gray-200 border-b">Subject</th>
+                                            <th class="py-2 px-4 bg-gray-200 border-b">Verb</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="py-2 px-4 border-b">I</td><td class="py-2 px-4 border-b"><span class="font-bold text-blue-600">have</span></td></tr>
+                                        <tr><td class="py-2 px-4 border-b">You</td><td class="py-2 px-4 border-b"><span class="font-bold text-blue-600">have</span></td></tr>
+                                        <tr><td class="py-2 px-4 border-b">We</td><td class="py-2 px-4 border-b"><span class="font-bold text-blue-600">have</span></td></tr>
+                                        <tr><td class="py-2 px-4 border-b">They</td><td class="py-2 px-4 border-b"><span class="font-bold text-blue-600">have</span></td></tr>
+                                        <tr><td class="py-2 px-4 border-b">He</td><td class="py-2 px-4 border-b"><span class="font-bold text-red-600">has</span></td></tr>
+                                        <tr><td class="py-2 px-4 border-b">She</td><td class="py-2 px-4 border-b"><span class="font-bold text-red-600">has</span></td></tr>
+                                        <tr><td class="py-2 px-4 border-b">It</td><td class="py-2 px-4 border-b"><span class="font-bold text-red-600">has</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Click the correct have/has activity -->
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-700 mb-2">Practice 1.1: Choose 'have' or 'has'</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="mb-2">1. My friend <select id="have_has_q1" class="p-2 border border-gray-300 rounded-md w-32">
+                                            <option value="">--Select--</option>
+                                            <option value="has">has</option>
+                                            <option value="have">have</option>
+                                        </select> visited many countries.</p>
+                                        <button onclick="checkSelectAnswer('have_has_q1', 'has', 'have_has_feedback1')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                        <div id="have_has_feedback1" class="feedback-box hidden"></div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2">2. We <select id="have_has_q2" class="p-2 border border-gray-300 rounded-md w-32">
+                                            <option value="">--Select--</option>
+                                            <option value="has">has</option>
+                                            <option value="have">have</option>
+                                        </select> never tried skydiving.</p>
+                                        <button onclick="checkSelectAnswer('have_has_q2', 'have', 'have_has_feedback2')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                        <div id="have_has_feedback2" class="feedback-box hidden"></div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2">3. I <select id="have_has_q3" class="p-2 border border-gray-300 rounded-md w-32">
+                                            <option value="">--Select--</option>
+                                            <option value="has">has</option>
+                                            <option value="have">have</option>
+                                        </select> already eaten breakfast.</p>
+                                        <button onclick="checkSelectAnswer('have_has_q3', 'have', 'have_has_feedback3')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                        <div id="have_has_feedback3" class="feedback-box hidden"></div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2">4. The dog <select id="have_has_q4" class="p-2 border border-gray-300 rounded-md w-32">
+                                            <option value="">--Select--</option>
+                                            <option value="has">has</option>
+                                            <option value="have">have</option>
+                                        </select> seen a squirrel.</p>
+                                        <button onclick="checkSelectAnswer('have_has_q4', 'has', 'have_has_feedback4')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                        <div id="have_has_feedback4" class="feedback-box hidden"></div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-2">5. You <select id="have_has_q5" class="p-2 border border-gray-300 rounded-md w-32">
+                                            <option value="">--Select--</option>
+                                            <option value="has">has</option>
+                                            <option value="have">have</option>
+                                        </select> never been to Canada.</p>
+                                        <button onclick="checkSelectAnswer('have_has_q5', 'have', 'have_has_feedback5')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                        <div id="have_has_feedback5" class="feedback-box hidden"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW BOX: What is a Past Participle? -->
+                    <div class="bg-gray-100 rounded-lg shadow-inner p-6 mb-6">
+                        <h3 class="text-xl font-bold text-[#FB8C00] mb-3">What is a Past Participle? 🤔</h3>
+                        <p class="text-gray-700 mb-4">For the <strong>Present Perfect</strong> tense, we always use a special form of the verb called the <strong>Past Participle</strong>. This is often the third form you might see in a verb list (e.g., go &rarr; went &rarr; <strong>gone</strong>).</p>
+                        <p class="text-gray-700 mb-4">Verbs in English change form! You're probably familiar with the <strong>base form</strong> (like 'go', 'eat', 'see') and the <strong>past simple form</strong> (like 'went', 'ate', 'saw').</p>
+                        <p class="text-700 mb-4">In <strong>Past Simple</strong> sentences, we use the <strong>past simple verb</strong> to talk about actions finished at a specific time in the past:</p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
+                            <li>I <strong>ran</strong> last week.</li>
+                            <li>She <strong>ate</strong> chicken yesterday.</li>
+                            <li>They <strong>went</strong> to the park.</li>
+                        </ul>
+
+                        <!-- Verb Conjugation Table -->
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-2">Common Verb Conjugations for <strong>Present Perfect</strong>:</h4>
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 bg-gray-200 border-b">Infinitive</th>
+                                        <th class="py-2 px-4 bg-gray-200 border-b">Past Simple</th>
+                                        <th class="py-2 px-4 bg-gray-200 border-b">Past Participle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="py-2 px-4 border-b">go</td><td class="py-2 px-4 border-b">went</td><td class="py-2 px-4 border-b"><span class="font-bold text-purple-600">gone</span></td></tr>
+                                    <tr><td class="py-2 px-4 border-b">speak</td><td class="py-2 px-4 border-b">spoke</td><td class="py-2 px-4 border-b"><span class="font-bold text-purple-600">spoken</span></td></tr>
+                                    <tr><td class="py-2 px-4 border-b">write</td><td class="py-2 px-4 border-b">wrote</td><td class="py-2 px-4 border-b"><span class="font-bold text-purple-600">written</span></td></tr>
+                                    <tr><td class="py-2 px-4 border-b">see</td><td class="py-2 px-4 border-b">saw</td><td class="py-2 px-4 border-b"><span class="font-bold text-purple-600">seen</span></td></tr>
+                                    <tr><td class="py-2 px-4 border-b">travel</td><td class="py-2 px-4 border-b">traveled</td><td class="py-2 px-4 border-b"><span class="font-bold text-purple-600">traveled</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- NEW ACTIVITY: Past Participle Table Practice -->
+                        <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-4">Practice 1.2: Complete the Past Participle Table</h3>
+                            <p class="text-gray-700 mb-4">Fill in the missing <strong>Past Participle</strong> forms for the verbs below. If a verb is regular, the Past Simple and Past Participle are usually the same (e.g., 'play' -> 'played' -> 'played').</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-2">
+                                    <p class="w-24">1. eat - ate -</p>
+                                    <input type="text" id="pp_table_q1" class="p-2 border border-gray-300 rounded-md w-32" placeholder="Past Participle">
+                                    <button onclick="checkAnswer('pp_table_q1', 'eaten', 'pp_table_feedback1')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                    <div id="pp_table_feedback1" class="feedback-box hidden"></div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <p class="w-24">2. write - wrote -</p>
+                                    <input type="text" id="pp_table_q2" class="p-2 border border-gray-300 rounded-md w-32" placeholder="Past Participle">
+                                    <button onclick="checkAnswer('pp_table_q2', 'written', 'pp_table_feedback2')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                    <div id="pp_table_feedback2" class="feedback-box hidden"></div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <p class="w-24">3. do - did -</p>
+                                    <input type="text" id="pp_table_q3" class="p-2 border border-gray-300 rounded-md w-32" placeholder="Past Participle">
+                                    <button onclick="checkAnswer('pp_table_q3', 'done', 'pp_table_feedback3')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                    <div id="pp_table_feedback3" class="feedback-box hidden"></div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <p class="w-24">4. make - made -</p>
+                                    <input type="text" id="pp_table_q4" class="p-2 border border-gray-300 rounded-md w-32" placeholder="Past Participle">
+                                    <button onclick="checkAnswer('pp_table_q4', 'made', 'pp_table_feedback4')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                    <div id="pp_table_feedback4" class="feedback-box hidden"></div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <p class="w-24">5. go - went -</p>
+                                    <input type="text" id="pp_table_q5" class="p-2 border border-gray-300 rounded-md w-32" placeholder="Past Participle">
+                                    <button onclick="checkAnswer('pp_table_q5', 'gone', 'pp_table_feedback5')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                    <div id="pp_table_feedback5" class="feedback-box hidden"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 mt-4 mb-4">Want to know the past participle of other verbs? Try using the <a href="../index.html#gemini_features" class="text-[#8E24AA] hover:underline font-semibold">Past Participle Verb Generator</a> (linked) at the bottom of the <strong>Present Perfect</strong> Overview page.</p>
+                    </div>
+
+                    <!-- NEW BOX: Affirmative Statements -->
+                    <div class="bg-gray-100 rounded-lg shadow-inner p-6 mb-6">
+                        <h3 class="text-xl font-bold text-[#FB8C00] mb-3">Affirmative Statements (Things you HAVE done) ✅</h3>
+                        <p class="text-gray-700 mb-4">We use affirmative statements to talk about experiences that you <strong>have had</strong> in your life, without saying exactly when. It's about what's true for you up to this moment.</p>
+                        <p class="text-gray-700 mb-2"><strong>Structure:</strong> Subject + have / has + Past Participle</p>
+                        <p class="text-700 mb-4">Here are some clear examples:</p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
+                            <li>I <strong>have <span class="font-bold text-purple-600">visited</span></strong> London.</li>
+                            <li>You <strong>have <span class="font-bold text-purple-600">tried</span></strong> sushi.</li>
+                            <li>He <strong>has <span class="font-bold text-purple-600">seen</span></strong> that movie.</li>
+                            <li>She <strong>has <span class="font-bold text-purple-600">eaten</span></strong> Turkish coffee.</li>
+                            <li>We <strong>have <span class="font-bold text-purple-600">learned</span></strong> a lot.</li>
+                            <li>They <strong>have <span class="font-bold text-purple-600">traveled</span></strong> to many countries.</li>
+                        </ul>
+                    </div>
+
+                    <!-- NEW BOX: Negative Statements -->
+                    <div class="bg-gray-100 rounded-lg shadow-inner p-6 mb-6">
+                        <h3 class="text-xl font-bold text-[#FB8C00] mb-3">Negative Statements (Things you HAVE NOT done) ❌</h3>
+                        <p class="text-gray-700 mb-4">We use negative statements to talk about experiences that you <strong>have not had</strong> in your life up to this point. It's about what hasn't happened to you yet.</p>
+                        <p class="text-gray-700 mb-2"><strong>Structure:</strong> Subject + have / has + NOT + Past Participle</p>
+                        <p class="text-gray-700 mb-4">Here are some clear examples:</p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
+                            <li>I <strong>have not</strong> (haven't) <strong>seen</strong> that movie.</li>
+                            <li>You <strong>have not</strong> (haven't) <strong>finished</strong> your work.</li>
+                            <li>He <strong>has not</strong> (hasn't) <strong>eaten</strong> sushi.</li>
+                            <li>She <strong>has not</strong> (hasn't) <strong>visited</strong> her grandparents.</li>
+                            <li>We <strong>have not</strong> (haven't) <strong>tried</strong> that new restaurant.</li>
+                            <li>They <strong>have not</strong> (haven't) <strong>been</strong> to the beach this year.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Practice Activity 1.3 (formerly 1.2) -->
+                    <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-4">Practice 1.3: Building Basic Statements</h3>
+                        <p class="text-gray-700 mb-4">Complete the sentences with the correct form (have/has + past participle) of the verb in parentheses.</p>
+                        <p class="text-700 mb-4"><strong>Example:</strong> I (visit) <span class="correct-answer">have visited</span> London many times.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="mb-2">1. I (eat) <input type="text" id="q1_1" class="p-2 border border-gray-300 rounded-md w-48"> sushi many times.</p>
+                                <button onclick="checkAnswer('q1_1', 'have eaten', 'feedback1_1')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                <div id="feedback1_1" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">2. She (see) <input type="text" id="q1_2" class="p-2 border border-gray-300 rounded-md w-48"> that movie before.</p>
+                                <button onclick="checkAnswer('q1_2', 'has seen', 'feedback1_2')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                <div id="feedback1_2" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">3. We (be) <input type="text" id="q1_3" class="p-2 border border-gray-300 rounded-md w-48"> to many interesting places.</p>
+                                <button onclick="checkAnswer('q1_3', 'have been', 'feedback1_3')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                <div id="feedback1_3" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">4. He (read) <input type="text" id="q1_4" class="p-2 border border-gray-300 rounded-md w-48"> all the Harry Potter books.</p>
+                                <button onclick="checkAnswer('q1_4', 'has read', 'feedback1_4')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm">Check</button>
+                                <div id="feedback1_4" class="feedback-box hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Practice Activity 1.4 (formerly 1.4) -->
+                    <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-4">Practice 1.4: Unscramble the Negative Sentences 🧩</h3>
+                        <p class="text-gray-700 mb-4">The words below are jumbled. Type the correct negative <strong>Present Perfect</strong> sentence in the box.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="mb-2">1. (never / I / tried / have / sushi)</p>
+                                <input type="text" id="unscramble_q1" class="p-2 border border-gray-300 rounded-md w-full" placeholder="Type the correct sentence here">
+                                <button onclick="checkAnswer('unscramble_q1', 'I have never tried sushi.', 'unscramble_feedback1')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="unscramble_feedback1" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">2. (finished / yet / She / hasn't / her homework)</p>
+                                <input type="text" id="unscramble_q2" class="p-2 border border-gray-300 rounded-md w-full" placeholder="Type the correct sentence here">
+                                <button onclick="checkAnswer('unscramble_q2', 'She hasn\'t finished her homework yet.', 'unscramble_feedback2')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="unscramble_feedback2" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">3. (seen / they / that / haven't / movie / before)</p>
+                                <input type="text" id="unscramble_q3" class="p-2 border border-gray-300 rounded-md w-full" placeholder="Type the correct sentence here">
+                                <button onclick="checkAnswer('unscramble_q3', 'They haven\'t seen that movie before.', 'unscramble_feedback3')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="unscramble_feedback3" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">4. (ever / He / flown / hasn't / in a helicopter)</p>
+                                <input type="text" id="unscramble_q4" class="p-2 border border-gray-300 rounded-md w-full" placeholder="Type the correct sentence here">
+                                <button onclick="checkAnswer('unscramble_q4', 'He hasn\'t ever flown in a helicopter.', 'unscramble_feedback4')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="unscramble_feedback4" class="feedback-box hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Practice Activity 1.5 (formerly 1.5) -->
+                    <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-4">Practice 1.5: Match the Sentence to the Picture 🖼️</h3>
+                        <p class="text-gray-700 mb-4">Choose the <strong>Present Perfect</strong> sentence that best describes each picture.</p>
+                        <p class="text-gray-600 text-sm mb-4"><em>(Note: These are placeholder images. They will appear correctly, but if you want specific images, you'll need to host them and update their URLs.)</em></p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Picture 1 -->
+                            <div class="p-4 border border-gray-300 rounded-lg text-center">
+                                <img src="https://imgur.com/SKtV9ox.png" alt="Person traveling" class="mx-auto rounded-md mb-3">
+                                <p class="mb-2">1. This person <select id="match_q1" class="p-2 border border-gray-300 rounded-md w-full">
+                                    <option value="">--Select--</option>
+                                    <option value="has traveled to many countries.">has traveled to many countries.</option>
+                                    <option value="traveled last year.">traveled last year.</option>
+                                    <option value="is traveling now.">is traveling now.</option>
+                                </select></p>
+                                <button onclick="checkSelectAnswer('match_q1', 'has traveled to many countries.', 'match_feedback1')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="match_feedback1" class="feedback-box hidden"></div>
+                            </div>
+                            <!-- Picture 2 -->
+                            <div class="p-4 border border-gray-300 rounded-lg text-center">
+                                <img src="https://imgur.com/v8veyBa.png" alt="Open book" class="mx-auto rounded-md mb-3">
+                                <p class="mb-2">2. She <select id="match_q2" class="p-2 border border-gray-300 rounded-md w-full">
+                                    <option value="">--Select--</option>
+                                    <option value="is reading a book.">is reading a book.</option>
+                                    <option value="read a book yesterday.">read a book yesterday.</option>
+                                    <option value="has read that book.">has read that book.</option>
+                                </select></p>
+                                <button onclick="checkSelectAnswer('match_q2', 'has read that book.', 'match_feedback2')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="match_feedback2" class="feedback-box hidden"></div>
+                            </div>
+                            <!-- Picture 3 -->
+                            <div class="p-4 border border-gray-300 rounded-lg text-center">
+                                <img src="https://imgur.com/zRoMAgD.png" alt="Sushi plate" class="mx-auto rounded-md mb-3">
+                                <p class="mb-2">3. They <select id="match_q3" class="p-2 border border-gray-300 rounded-md w-full">
+                                    <option value="">--Select--</option>
+                                    <option value="are eating sushi.">are eating sushi.</option>
+                                    <option value="have eaten sushi before.">have eaten sushi before.</option>
+                                    <option value="ate sushi last night.">ate sushi last night.</option>
+                                </select></p>
+                                <button onclick="checkSelectAnswer('match_q3', 'have eaten sushi before.', 'match_feedback3')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="match_feedback3" class="feedback-box hidden"></div>
+                            </div>
+                            <!-- Picture 4 -->
+                            <div class="p-4 border border-gray-300 rounded-lg text-center">
+                                <img src="https://imgur.com/x5PC44I.png" alt="Mountain climbing" class="mx-auto rounded-md mb-3">
+                                <p class="mb-2">4. He <select id="match_q4" class="p-2 border border-gray-300 rounded-md w-full">
+                                    <option value="">--Select--</option>
+                                    <option value="climbed a mountain.">climbed a mountain.</option>
+                                    <option value="is climbing a mountain.">is climbing a mountain.</option>
+                                    <option value="has climbed a mountain.">has climbed a mountain.</option>
+                                </select></p>
+                                <button onclick="checkSelectAnswer('match_q4', 'has climbed a mountain.', 'match_feedback4')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="match_feedback4" class="feedback-box hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW ACTIVITY: Sentence Transformation -->
+                    <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-4">Practice 1.6: Sentence Transformation 🔄</h3>
+                        <p class="text-gray-700 mb-4">Read the simple past sentence or scenario. Then, rewrite it as a <strong>Present Perfect</strong> sentence about a life experience. Don't worry about specific times!</p>
+
+                        <!-- Scaffolding Table -->
+                        <div class="bg-blue-50 rounded-lg p-4 mb-6 border border-blue-200">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-2">💡 How to transform:</h4>
+                            <table class="w-full text-left text-sm border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th class="py-1 px-2 bg-blue-100 border-b border-blue-200">Original (Past Simple)</th>
+                                        <th class="py-1 px-2 bg-blue-100 border-b border-blue-200">Transformation</th>
+                                        <th class="py-1 px-2 bg-blue-100 border-b border-blue-200">Present Perfect Form</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="py-1 px-2 border-b border-blue-200">I <strong>saw</strong> a movie.</td><td class="py-1 px-2 border-b border-blue-200">Change 'saw' to Past Participle</td><td class="py-1 px-2 border-b border-blue-200">I <strong>have seen</strong> a movie.</td></tr>
+                                    <tr><td class="py-1 px-2 border-b border-blue-200">She <strong>ate</strong> sushi.</td><td class="py-1 px-2 border-b border-blue-200">Change 'ate' to Past Participle</td><td class="py-1 px-2 border-b border-blue-200">She <strong>has eaten</strong> sushi.</td></tr>
+                                    <tr><td class="py-1 px-2 border-b border-blue-200">They <strong>went</strong> to Paris.</td><td class="py-1 px-2 border-b border-blue-200">Change 'went' to Past Participle</td><td class="py-1 px-2 border-b border-blue-200">They <strong>have been</strong> to Paris.</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="text-blue-800 mt-3 font-semibold">Common Past Participles for this exercise:</p>
+                            <p class="text-gray-700"><strong>see</strong> &rarr; seen | <strong>eat</strong> &rarr; eaten | <strong>go</strong> &rarr; gone/been | <strong>read</strong> &rarr; read | <strong>meet</strong> &rarr; met</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div>
+                                <p class="mb-2">1. I saw that movie last year.</p>
+                                <textarea id="transform_q1" class="w-full p-2 border border-gray-300 rounded-md" rows="2" placeholder="Rewrite as Present Perfect (e.g., I have seen that movie)."></textarea>
+                                <button onclick="checkSentenceAI('transform_q1', 'transform_feedback1')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-1 px-3 rounded-lg text-sm">Check with AI</button>
+                                <div id="transform_feedback1" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">2. She ate sushi when she was in Japan.</p>
+                                <textarea id="transform_q2" class="w-full p-2 border border-gray-300 rounded-md" rows="2" placeholder="Rewrite as Present Perfect."></textarea>
+                                <button onclick="checkSentenceAI('transform_q2', 'transform_feedback2')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-1 px-3 rounded-lg text-sm">Check with AI</button>
+                                <div id="transform_feedback2" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">3. They went to Paris in 2020.</p>
+                                <textarea id="transform_q3" class="w-full p-2 border border-gray-300 rounded-md" rows="2" placeholder="Rewrite as Present Perfect."></textarea>
+                                <button onclick="checkSentenceAI('transform_q3', 'transform_feedback3')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-1 px-3 rounded-lg text-sm">Check with AI</button>
+                                <div id="transform_feedback3" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">4. He read that book last month.</p>
+                                <textarea id="transform_q4" class="w-full p-2 border border-gray-300 rounded-md" rows="2" placeholder="Rewrite as Present Perfect."></textarea>
+                                <button onclick="checkSentenceAI('transform_q4', 'transform_feedback4')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-1 px-3 rounded-lg text-sm">Check with AI</button>
+                                <div id="transform_feedback4" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">5. We met them at the conference yesterday.</p>
+                                <textarea id="transform_q5" class="w-full p-2 border border-gray-300 rounded-md" rows="2" placeholder="Rewrite as Present Perfect."></textarea>
+                                <button onclick="checkSentenceAI('transform_q5', 'transform_feedback5')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-1 px-3 rounded-lg text-sm">Check with AI</button>
+                                <div id="transform_q5" class="feedback-box hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer section -->
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">Great job practicing! Keep exploring and using the <strong>Present Perfect</strong>. 🌟</p>
+            <div class="mt-8 p-6 bg-white rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-[#F4511E] mb-4">Do you have any questions about the <strong>Present Perfect</strong>?</h3>
+                <p class="text-gray-700 mb-4">Type your question below, and our AI will try to help you understand!</p>
+                <textarea id="generalQuestionInput" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#FB8C00]" rows="3" placeholder="e.g., What's the difference between 'been' and 'gone'?"></textarea>
+                <button onclick="checkSentenceAI('generalQuestionInput', 'generalQuestionFeedback')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300">
+                    Ask AI
+                </button>
+                <div id="generalQuestionFeedback" class="feedback-box hidden"></div>
+            </div>
+            <!-- Loading indicator for AI feedback (global) -->
+            <div id="loadingIndicator" class="mt-4 text-center hidden">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#8E24AA] mx-auto"></div>
+                <p class="text-gray-600 mt-2">Thinking...</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Define apiKey globally. This will be automatically populated by the Canvas environment.
+        const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU"; // API Key added here
+
+        /**
+         * Checks a text input field against a single correct answer.
+         * Displays feedback (correct/incorrect) to the user.
+         * @param {string} inputId - The ID of the input element.
+         * @param {string} correctAnswer - The expected correct answer.
+         * @param {string} feedbackId - The ID of the feedback display element.
+         */
+        function checkAnswer(inputId, correctAnswer, feedbackId) {
+            const inputElement = document.getElementById(inputId);
+            const feedbackElement = document.getElementById(feedbackId);
+            // Trim whitespace and convert to lowercase for case-insensitive comparison
+            const userAnswer = inputElement.value.trim().toLowerCase();
+            const correct = correctAnswer.toLowerCase();
+
+            feedbackElement.classList.remove('hidden'); // Show feedback box
+            if (userAnswer === correct) {
+                feedbackElement.innerHTML = '<span class="correct-answer">Correct!</span>';
+            } else {
+                feedbackElement.innerHTML = `<span class="incorrect-answer">Incorrect.</span> The correct answer is: <span class="correct-answer">${correctAnswer}</span>`;
+            }
+        }
+
+        /**
+         * Checks a select (dropdown) input field against a single correct answer.
+         * Displays feedback (correct/incorrect) to the user.
+         * @param {string} selectId - The ID of the select element.
+         * @param {string} correctAnswer - The expected correct answer.
+         * @param {string} feedbackId - The ID of the feedback display element.
+         */
+        function checkSelectAnswer(selectId, correctAnswer, feedbackId) {
+            const selectElement = document.getElementById(selectId);
+            const feedbackElement = document.getElementById(feedbackId);
+            const userAnswer = selectElement.value.trim(); // Get selected value
+
+            feedbackElement.classList.remove('hidden'); // Show feedback box
+            if (userAnswer === correctAnswer) {
+                feedbackElement.innerHTML = '<span class="correct-answer">Correct!</span>';
+            } else {
+                feedbackElement.innerHTML = `<span class="incorrect-answer">Incorrect.</span> The correct answer is: <span class="correct-answer">${correctAnswer}</span>`;
+            }
+        }
+
+        /**
+         * Checks a select (dropdown) input field for Past Simple vs Past Participle.
+         * Provides specific feedback including an explanation for incorrect answers.
+         * @param {string} selectId - The ID of the select element.
+         * @param {string} correctAnswer - The expected correct answer.
+         * @param {string} feedbackId - The ID of the feedback display element.
+         * @param {string} explanation - The explanation for why the answer is correct/incorrect.
+         */
+        function checkPastParticipleAnswer(selectId, correctAnswer, feedbackId, explanation) {
+            const selectElement = document.getElementById(selectId);
+            const feedbackElement = document.getElementById(feedbackId);
+            const userAnswer = selectElement.value.trim();
+
+            feedbackElement.classList.remove('hidden');
+            if (userAnswer === correctAnswer) {
+                feedbackElement.innerHTML = `<span class="correct-answer">Correct!</span> ${explanation}`;
+            } else {
+                feedbackElement.innerHTML = `<span class="incorrect-answer">Incorrect.</span> The correct answer is: <span class="correct-answer">${correctAnswer}</span>. <strong>Why it's not correct:</strong> ${explanation}`;
+            }
+        }
+
+        /**
+         * Checks a radio button group for a video quiz question.
+         * Provides specific feedback including an and explanation for correct/incorrect answers.
+         * @param {string} name - The 'name' attribute of the radio button group.
+         * @param {string} correctAnswer - The 'value' of the correct radio button.
+         * @param {string} feedbackId - The ID of the feedback display element.
+         * @param {string} explanation - The explanation for why the answer is correct/incorrect.
+         */
+        function checkVideoQuizAnswer(name, correctAnswer, feedbackId, explanation) {
+            const radioButtons = document.querySelectorAll(`input[name="${name}"]`);
+            const feedbackElement = document.getElementById(feedbackId);
+            let userAnswer = '';
+            radioButtons.forEach(radio => {
+                if (radio.checked) {
+                    userAnswer = radio.value;
+                }
+            });
+
+            feedbackElement.classList.remove('hidden');
+            if (userAnswer === correctAnswer) {
+                feedbackElement.innerHTML = `<span class="correct-answer">Correct!</span> ${explanation}`;
+            } else if (userAnswer === '') {
+                feedbackElement.innerHTML = `<span class="incorrect-answer">Please select an answer.</span>`;
+            }
+            else {
+                feedbackElement.innerHTML = `<span class="incorrect-answer">Incorrect.</span> <strong>Why it's not correct:</strong> ${explanation}`;
+            }
+        }
+
+
+        /**
+         * Checks a text input field against multiple possible correct short answers.
+         * Displays feedback (correct/incorrect) to the user.
+         * @param {string} inputId - The ID of the input element.
+         * @param {string[]} correctAnswers - An array of possible correct answers.
+         * @param {string} feedbackId - The ID of the feedback display element.
+         */
+        function checkShortAnswer(inputId, correctAnswers, feedbackId) {
+            const inputElement = document.getElementById(inputId);
+            const feedbackElement = document.getElementById(feedbackId);
+            const userAnswer = inputElement.value.trim().toLowerCase();
+            // Check if user's answer matches any of the correct answers (case-insensitive)
+            const isCorrect = correctAnswers.some(answer => answer.toLowerCase() === userAnswer);
+
+            feedbackElement.classList.remove('hidden'); // Show feedback box
+            if (isCorrect) {
+                feedbackElement.innerHTML = '<span class="correct-answer">Correct!</span>';
+            } else {
+                // Display all possible correct answers if incorrect
+                feedbackElement.innerHTML = `<span class="incorrect-answer">Incorrect.</span> Try: <span class="correct-answer">${correctAnswers.join(' or ')}</span>`;
+            }
+        }
+
+        /**
+         * Sends a user-entered sentence to the Gemini API for grammar and tense checking.
+         * Displays detailed feedback with corrections and explanations.
+         * @param {string} inputId - The ID of the textarea element containing the user's sentence.
+         * @param {string} feedbackId - The ID of the element where feedback will be displayed.
+         */
+        async function checkSentenceAI(inputId, feedbackId) {
+            const sentence = document.getElementById(inputId).value.trim();
+            const feedbackOutput = document.getElementById(feedbackId);
+            const loadingIndicator = document.getElementById('loadingIndicator');
+
+            // Validate if sentence is empty
+            if (!sentence) {
+                feedbackOutput.innerHTML = "Please enter a sentence to check.";
+                feedbackOutput.classList.remove('hidden');
+                return;
+            }
+
+            // Show loading indicator and hide previous feedback
+            loadingIndicator.classList.remove('hidden');
+            feedbackOutput.classList.add('hidden');
+
+            // Construct the prompt for the Gemini API
+            const prompt = `Analyze the following English sentence for Present Perfect tense usage and general grammar. Provide feedback for an A2/B1 learner.
+            
+            Structure your response using HTML tags for bold (<strong>), line breaks (<br>), red strikethrough (<span class="error-text">...</span>), and green text (<span class="correction-text">...</span>).
+            
+            1. Start with: "Your sentence is <strong>[Correct/Incorrect]</strong>.<br><br>"
+            2. If incorrect, show the incorrect sentence with the problematic part marked: "<strong>Original:</strong> [Sentence with <span class="error-text">incorrect_part</span>].<br><br>"
+            3. Then, provide the corrected sentence: "<strong>Correction:</strong> [Sentence with <span class="correction-text">corrected_part</span>].<br><br>"
+            4. Explain "<strong>Why it's not correct:</strong> [Your explanation here, use <strong> for key terms].<br><br>"
+            5. Add a brief, simple explanation of the corrected sentence's meaning or the rule applied.
+            
+            If the sentence is grammatically correct and uses the Present Perfect, state: "Your sentence is <strong>Correct</strong>.<br><br>This sentence correctly uses the Present Perfect tense to [briefly explain why it's correct]."
+            
+            If the sentence is grammatically correct but does not use the Present Perfect tense, state: "Your sentence is <strong>Correct</strong>.<br><br>This sentence is grammatically correct but does not use the Present Perfect tense."
+            
+            Ensure all bolding uses <strong> tags and avoid asterisks for bolding.
+            
+            Sentence: "${sentence}"`;
+
+            // Prepare the payload for the API request
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            // API URL for Gemini 2.0 Flash model
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                // Make the API call
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                // Process the API response
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    feedbackOutput.innerHTML = text; // Display the AI's feedback
+                    feedbackOutput.classList.remove('hidden');
+                } else {
+                    feedbackOutput.innerHTML = "Sorry, I couldn't check your sentence right now. Please try again.";
+                    feedbackOutput.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Handle any errors during the API call
+                feedbackOutput.innerHTML = "An error occurred while checking. Please check your connection and try again.";
+                feedbackOutput.classList.remove('hidden');
+            } finally {
+                // Hide loading indicator regardless of success or failure
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

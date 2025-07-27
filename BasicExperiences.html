@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present Perfect: Basic Experiences</title>
+    <title>Present Perfect: Introduction & Basic Structure</title>
     <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter for consistent typography -->
@@ -71,6 +71,18 @@
         .present-perfect-text {
             color: #DC2626; /* Tailwind red-600 */
         }
+        /* Style for contraction highlight */
+        .contraction-highlight {
+            background-color: #e0f7fa; /* Light cyan */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+        /* Bold purple for Present Perfect verbs in roleplays */
+        .present-perfect-verb {
+            font-weight: bold;
+            color: #8E24AA; /* A shade of purple */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -80,8 +92,8 @@
 
         <!-- Header section with title and subtitle -->
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-black text-[#8E24AA] mb-2">Present Perfect: Basic Experiences</h1>
-            <p class="text-lg md:text-xl text-gray-600">Starting your journey with "What have you done?"</p>
+            <h1 class="text-4xl md:text-5xl font-black text-[#8E24AA] mb-2">Present Perfect: Introduction & Basic Structure</h1>
+            <p class="text-lg md:text-xl text-gray-600">Starting your journey with life experiences!</p>
         </header>
 
         <main>
@@ -92,13 +104,13 @@
                     <h2 class="text-2xl font-bold text-[#D81B60] mb-4">Connecting Your Past to Now 👋</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">On this page, we'll focus on one of the most common ways to use the <strong>Present Perfect</strong>: to talk about things you have done or experienced at <strong>any point in your life</strong>, when the <strong>exact time is not important or not mentioned</strong>. It's all about your life journey up to this moment!</p>
                     <!-- Image updated to a placehold.co URL for reliable embedding -->
-                    <img src="https://imgur.com/BSz9V6b.png" alt="Life Journey Timeline" class="w-full max-w-sm mx-auto rounded-lg shadow-md my-6">
+                    <img src="https://imgur.com/JSu2zJA.png" alt="Life Journey Timeline" class="w-full max-w-sm mx-auto rounded-lg shadow-md my-6">
                     <p class="text-gray-700 leading-relaxed mb-4">Think of it like this: when you're catching up with a friend and they ask, "What have you done recently?" or "Have you ever tried [something new]?", they're not asking for a specific date and time. They want to know about your experiences up until now. The <strong>Present Perfect</strong> is perfect for these kinds of conversations!</p>
                     <p class="text-gray-700 leading-relaxed mb-4">It's used for actions that started in the past but are still true or have a result now, or for experiences that happened at an unspecified time in your life.</p>
                     <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
-                        <li>I <strong>have lived</strong> in this city for five years. (Still living here)</li>
-                        <li>She <strong>has visited</strong> Paris many times. (Her experience up to now)</li>
-                        <li>They <strong>have just finished</strong> their project. (Action completed very recently, result is present)</li>
+                        <li>I <span class="present-perfect-verb">have lived</span> in this city for five years. (Still living here)</li>
+                        <li>She <span class="present-perfect-verb">has visited</span> Paris many times. (Her experience up to now)</li>
+                        <li>They <span class="present-perfect-verb">have just finished</span> their project. (Action completed very recently, result is present)</li>
                     </ul>
                 </div>
             </section>
@@ -110,50 +122,70 @@
                     <p class="text-gray-700 mb-6">Let's see how the <strong>Present Perfect</strong> is used in everyday chats between friends. Notice how they talk about experiences without giving a specific time.</p>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Roleplay 1 -->
+                        <!-- Roleplay 1 (Learning New Skills - REVISED SCRIPT) -->
                         <div class="bg-gray-100 rounded-lg shadow-inner p-6">
-                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 1: Trying New Foods</h3>
-                            <p class="text-gray-700"><strong>Akin:</strong> "Have you ever tried jellied eel?"</p>
-                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hiç jöleli yılan balığı denedin mi?)</em></p>
-                            <p class="text-gray-700"><strong>Kubilay:</strong> "No, I haven't. I've never been brave enough! Have you?"</p>
-                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hayır, denemedim. Hiç cesur olamadım! Sen denedin mi?)</em></p>
-                            <p class="text-gray-700"><strong>Akin:</strong> "Yes, I have! I've already tried it twice. It's an old traditional British food. Not many places sell it nowadays. It's... interesting!"</p>
-                            <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Evet, denedim! Hatta iki kez denedim bile. Eski bir geleneksel İngiliz yemeği. Artık pek çok yerde satılmıyor. İlginç bir şey!)</em></p>
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 1: Learning New Skills</h3>
+                            <!-- Audio Player for Roleplay 1 -->
+                            <audio controls class="w-full mb-4">
+                                <source src="https://storage.googleapis.com/english-audio-lessons/PresentPerfect/Roleplay1.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="text-gray-700"><strong>Boyfriend:</strong> "<span class="present-perfect-verb">Have you ever learned</span> to play a musical instrument?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hiç müzik aleti çalmayı öğrendin mi?)</em></p>
+                            <p class="text-700"><strong>Girlfriend:</strong> "Yes, I have! I<span class="present-perfect-verb">'ve played</span> the guitar for about five years."</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Evet, öğrendim! Yaklaşık beş yıldır gitar çalıyorum.)</em></p>
+                            <p class="text-700"><strong>Boyfriend:</strong> "Wow, I had no idea that you were so musical! How come I<span class="present-perfect-verb">'ve never seen</span> you play?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Vay canına, bu kadar müzikal olduğunu hiç bilmiyordum! Neden hiç çaldığını görmedim?)</em></p>
+                            <p class="text-700"><strong>Girlfriend:</strong> "Well, I <span class="present-perfect-verb">haven't played</span> much since I left college. Life got busy, you know? But I still love it."</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Şey, üniversiteden ayrıldığımdan beri pek çalmadım. Hayat yoğunlaştı, biliyor musun? Ama hala çok seviyorum.)</em></p>
+                            <p class="text-700"><strong>Boyfriend:</strong> "I<span class="present-perfect-verb">'ve always wanted</span> to learn how to play."</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Ben hep çalmayı öğrenmek istemişimdir.)</em></p>
+                            <p class="text-700"><strong>Girlfriend:</strong> "I<span class="present-perfect-verb">'ve never taught</span> anyone before, but maybe I can teach you. We could play together!"</p>
+                            <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Daha önce hiç kimseye öğretmedim ama belki sana öğretebilirim. Birlikte çalabiliriz!)</em></p>
                         </div>
 
-                        <!-- Roleplay 2 -->
+                        <!-- Roleplay 2 (Travel Plans - UNCHANGED) -->
                         <div class="bg-gray-100 rounded-lg shadow-inner p-6">
                             <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 2: Travel Plans</h3>
-                            <p class="text-gray-700"><strong>Coworker 1:</strong> "I'm planning a trip to Japan. Have you been there yet?"</p>
+                            <!-- Audio Player for Roleplay 2 -->
+                            <audio controls class="w-full mb-4">
+                                <source src="https://storage.googleapis.com/english-audio-lessons/PresentPerfect/Roleplay2.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="text-700"><strong>Coworker 1:</strong> "I'm planning a trip to Japan. <span class="present-perfect-verb">Have you been</span> there yet?"</p>
                             <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Henüz oraya gittin mi?)</em></p>
-                            <p class="text-gray-700"><strong>Coworker 2:</strong> "No, I haven't been to Japan yet, but I really want to go! My brother has already visited Tokyo."</p>
+                            <p class="text-700"><strong>Coworker 2:</strong> "No, I <span class="present-perfect-verb">haven't been</span> to Japan yet, but I really want to go! My brother <span class="present-perfect-verb">has already visited</span> Tokyo."</p>
                             <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Hayır, henüz Japonya'ya gitmedim ama gerçekten gitmek istiyorum! Kardeşim Tokyo'yu zaten ziyaret etti.)</em></p>
                         </div>
 
-                        <!-- Roleplay 3 -->
+                        <!-- Roleplay 3 (Recent Activities - UNCHANGED) -->
                         <div class="bg-gray-100 rounded-lg shadow-inner p-6">
                             <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 3: Recent Activities</h3>
-                            <p class="text-gray-700"><strong>Roommate 1:</strong> "I've just finished reading an amazing book. Have you read anything good recently?"</p>
+                            <!-- Audio Player for Roleplay 3 -->
+                            <audio controls class="w-full mb-4">
+                                <source src="https://storage.googleapis.com/english-audio-lessons/PresentPerfect/Roleplay3.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="text-700"><strong>Roommate 1:</strong> "I<span class="present-perfect-verb">'ve just finished</span> reading an amazing book. <span class="present-perfect-verb">Have you read</span> anything good recently?"</p>
                             <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Harika bir kitabı yeni bitirdim. Son zamanlarda iyi bir şey okudun mu?)</em></p>
-                            <p class="text-gray-700"><strong>Roommate 2:</strong> "Oh, I haven't read much recently. But I've already watched that new series everyone is talking about!"</p>
+                            <p class="text-700"><strong>Roommate 2:</strong> "Oh, I <span class="present-perfect-verb">haven't read</span> much recently. But I<span class="present-perfect-verb">'ve already watched</span> that new series everyone is talking about!"</p>
                             <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Oh, son zamanlarda pek okumadım. Ama herkesin bahsettiği o yeni diziyi zaten izledim!)</em></p>
                         </div>
 
-                        <!-- Roleplay 4 (New) -->
+                        <!-- Roleplay 4 (Trying New Foods - MOVED FROM RP1) -->
                         <div class="bg-gray-100 rounded-lg shadow-inner p-6">
-                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 4: Learning New Skills</h3>
-                            <p class="text-gray-700"><strong>Boyfriend:</strong> "Have you ever learned to play a musical instrument?"</p>
-                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hiç müzik aleti çalmayı öğrendin mi?)</em></p>
-                            <p class="text-gray-700"><strong>Girlfriend:</strong> "Yes, I have! I've played the guitar for five years."</p>
-                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Evet, öğrendim! Beş yıldır gitar çalıyorum.)</em></p>
-                            <p class="text-gray-700"><strong>Boyfriend:</strong> "Wow, I had no idea that you were so musical! How come I've never seen you play?"</p>
-                            <p class="text-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Vay canına, bu kadar müzikal olduğunu hiç bilmiyordum! Neden hiç çaldığını görmedim?)</em></p>
-                            <p class="text-gray-700"><strong>Girlfriend:</strong> "I haven't played since I left college."</p>
-                            <p class="text-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Üniversiteden ayrıldığımdan beri çalmadım.)</em></p>
-                            <p class="text-gray-700"><strong>Boyfriend:</strong> "I've always wanted to learn how to play."</p>
-                            <p class="text-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Ben hep çalmayı öğrenmek istemişimdir.)</em></p>
-                            <p class="text-gray-700"><strong>Girlfriend:</strong> "Well, I've never taught anyone before. But, maybe I can teach you. We can play together."</p>
-                            <p class="text-700 text-sm text-gray-500"><em>(Türkçe: Şey, daha önce hiç kimseye öğretmedim. Ama belki sana öğretebilirim. Birlikte çalabiliriz.)</em></p>
+                            <h3 class="text-xl font-bold text-[#D81B60] mb-3">Roleplay 4: Trying New Foods</h3>
+                            <!-- Audio Player for Roleplay 4 (using original Roleplay1.wav, now expected as Roleplay4.wav) -->
+                            <audio controls class="w-full mb-4">
+                                <source src="https://storage.googleapis.com/english-audio-lessons/PresentPerfect/Roleplay4.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="text-gray-700"><strong>Akin:</strong> "<span class="present-perfect-verb">Have you ever tried</span> jellied eel?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hiç jöleli yılan balığı denedin mi?)</em></p>
+                            <p class="text-700"><strong>Kubilay:</strong> "No, I <span class="present-perfect-verb">haven't</span>. I<span class="present-perfect-verb">'ve never been</span> brave enough! <span class="present-perfect-verb">Have you</span>?"</p>
+                            <p class="text-gray-700 text-sm text-gray-500 mb-2"><em>(Türkçe: Hayır, denemedim. Hiç cesur olamadım! Sen denedin mi?)</em></p>
+                            <p class="text-700"><strong>Akin:</strong> "Yes, I have! I<span class="present-perfect-verb">'ve already tried</span> it twice. It's an old traditional British food. Not many places sell it nowadays. It's... interesting!"</p>
+                            <p class="text-gray-700 text-sm text-gray-500"><em>(Türkçe: Evet, denedim! Hatta iki kez denedim bile. Eski bir geleneksel İngiliz yemeği. Artık pek çok yerde satılmıyor. İlginç bir şey!)</em></p>
                         </div>
                     </div>
                 </div>
@@ -315,7 +347,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <p class="text-gray-700 mt-4">Learning these Past Participle forms is very important, not just for the Present Perfect, but also for other tenses and passive voice structures you'll learn later!</p>
                         <p class="text-gray-700 mt-4 mb-4">Want to know the past participle of other verbs? Try using the <a href="../index.html#gemini_features" class="text-[#8E24AA] hover:underline font-semibold">Past Participle Verb Generator</a> (linked) at the bottom of the <strong>Present Perfect</strong> Overview page.</p>
                     </div>
 
@@ -324,14 +356,24 @@
                         <h3 class="text-xl font-bold text-[#FB8C00] mb-3">Affirmative Statements (Things you HAVE done) ✅</h3>
                         <p class="text-gray-700 mb-4">We use affirmative statements to talk about experiences that you <strong>have had</strong> in your life, without saying exactly when. It's about what's true for you up to this moment.</p>
                         <p class="text-gray-700 mb-2"><strong>Structure:</strong> Subject + have / has + Past Participle</p>
+                        <p class="text-gray-700 mb-4">Remember that 'have' and 'has' can be contracted in informal speech and writing:</p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
+                            <li>I <strong>have</strong> &rarr; <span class="contraction-highlight">I've</span></li>
+                            <li>You <strong>have</strong> &rarr; <span class="contraction-highlight">You've</span></li>
+                            <li>He <strong>has</strong> &rarr; <span class="contraction-highlight">He's</span></li>
+                            <li>She <strong>has</strong> &rarr; <span class="contraction-highlight">She's</span></li>
+                            <li>It <strong>has</strong> &rarr; <span class="contraction-highlight">It's</span></li>
+                            <li>We <strong>have</strong> &rarr; <span class="contraction-highlight">We've</span></li>
+                            <li>They <strong>have</strong> &rarr; <span class="contraction-highlight">They've</span></li>
+                        </ul>
                         <p class="text-700 mb-4">Here are some clear examples:</p>
                         <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
-                            <li>I <strong>have <span class="font-bold text-purple-600">visited</span></strong> London.</li>
-                            <li>You <strong>have <span class="font-bold text-purple-600">tried</span></strong> sushi.</li>
-                            <li>He <strong>has <span class="font-bold text-purple-600">seen</span></strong> that movie.</li>
-                            <li>She <strong>has <span class="font-bold text-purple-600">eaten</span></strong> Turkish coffee.</li>
-                            <li>We <strong>have <span class="font-bold text-purple-600">learned</span></strong> a lot.</li>
-                            <li>They <strong>have <span class="font-bold text-purple-600">traveled</span></strong> to many countries.</li>
+                            <li>I <strong>have <span class="font-bold text-purple-600">visited</span></strong> London. (Or: <span class="contraction-highlight">I've visited</span> London.)</li>
+                            <li>You <strong>have <span class="font-bold text-purple-600">tried</span></strong> sushi. (Or: <span class="contraction-highlight">You've tried</span> sushi.)</li>
+                            <li>He <strong>has <span class="font-bold text-purple-600">seen</span></strong> that movie. (Or: <span class="contraction-highlight">He's seen</span> that movie.)</li>
+                            <li>She <strong>has <span class="font-bold text-purple-600">eaten</span></strong> Turkish coffee. (Or: <span class="contraction-highlight">She's eaten</span> Turkish coffee.)</li>
+                            <li>We <strong>have <span class="font-bold text-purple-600">learned</span></strong> a lot. (Or: <span class="contraction-highlight">We've learned</span> a lot.)</li>
+                            <li>They <strong>have <span class="font-bold text-purple-600">traveled</span></strong> to many countries. (Or: <span class="contraction-highlight">They've traveled</span> to many countries.)</li>
                         </ul>
                     </div>
 
@@ -340,14 +382,19 @@
                         <h3 class="text-xl font-bold text-[#FB8C00] mb-3">Negative Statements (Things you HAVE NOT done) ❌</h3>
                         <p class="text-gray-700 mb-4">We use negative statements to talk about experiences that you <strong>have not had</strong> in your life up to this point. It's about what hasn't happened to you yet.</p>
                         <p class="text-gray-700 mb-2"><strong>Structure:</strong> Subject + have / has + NOT + Past Participle</p>
+                        <p class="text-gray-700 mb-4">Remember that 'have not' and 'has not' can be contracted:</p>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
+                            <li>have not &rarr; <span class="contraction-highlight">haven't</span></li>
+                            <li>has not &rarr; <span class="contraction-highlight">hasn't</span></li>
+                        </ul>
                         <p class="text-gray-700 mb-4">Here are some clear examples:</p>
                         <ul class="list-disc list-inside text-gray-700 mb-4 pl-4">
-                            <li>I <strong>have not</strong> (haven't) <strong>seen</strong> that movie.</li>
-                            <li>You <strong>have not</strong> (haven't) <strong>finished</strong> your work.</li>
-                            <li>He <strong>has not</strong> (hasn't) <strong>eaten</strong> sushi.</li>
-                            <li>She <strong>has not</strong> (hasn't) <strong>visited</strong> her grandparents.</li>
-                            <li>We <strong>have not</strong> (haven't) <strong>tried</strong> that new restaurant.</li>
-                            <li>They <strong>have not</strong> (haven't) <strong>been</strong> to the beach this year.</li>
+                            <li>I <strong>have not</strong> (<span class="contraction-highlight">haven't</span>) <strong>seen</strong> that movie.</li>
+                            <li>You <strong>have not</strong> (<span class="contraction-highlight">haven't</span>) <strong>finished</strong> your work.</li>
+                            <li>He <strong>has not</strong> (<span class="contraction-highlight">hasn't</span>) <strong>eaten</strong> sushi.</li>
+                            <li>She <strong>has not</strong> (<span class="contraction-highlight">hasn't</span>) <strong>visited</strong> her grandparents.</li>
+                            <li>We <strong>have not</strong> (<span class="contraction-highlight">haven't</span>) <strong>tried</strong> that new restaurant.</li>
+                            <li>They <strong>have not</strong> (<span class="contraction-highlight">haven't</span>) <strong>been</strong> to the beach this year.</li>
                         </ul>
                     </div>
 
@@ -524,7 +571,33 @@
                                 <p class="mb-2">5. We met them at the conference yesterday.</p>
                                 <textarea id="transform_q5" class="w-full p-2 border border-gray-300 rounded-md" rows="2" placeholder="Rewrite as Present Perfect."></textarea>
                                 <button onclick="checkSentenceAI('transform_q5', 'transform_feedback5')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-1 px-3 rounded-lg text-sm">Check with AI</button>
-                                <div id="transform_q5" class="feedback-box hidden"></div>
+                                <div id="transform_feedback5" class="feedback-box hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW ACTIVITY: Contraction Challenge -->
+                    <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-inner">
+                        <h3 class="text-xl font-bold text-[#D81B60] mb-4">Practice 1.7: Contraction Challenge 💪</h3>
+                        <p class="text-gray-700 mb-4">Rewrite the following sentences using the correct contractions for 'have'/'has' and 'have not'/'has not'.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="mb-2">1. I have finished my work.</p>
+                                <input type="text" id="contraction_q1" class="p-2 border border-gray-300 rounded-md w-full" placeholder="e.g., I've finished my work.">
+                                <button onclick="checkAnswer('contraction_q1', 'I\'ve finished my work.', 'contraction_feedback1')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="contraction_feedback1" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">2. She has not seen that movie.</p>
+                                <input type="text" id="contraction_q2" class="p-2 border border-gray-300 rounded-md w-full" placeholder="e.g., She hasn't seen that movie.">
+                                <button onclick="checkAnswer('contraction_q2', 'She hasn\'t seen that movie.', 'contraction_feedback2')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="contraction_feedback2" class="feedback-box hidden"></div>
+                            </div>
+                            <div>
+                                <p class="mb-2">3. They have been to Paris.</p>
+                                <input type="text" id="contraction_q3" class="p-2 border border-gray-300 rounded-md w-full" placeholder="e.g., They've been to Paris.">
+                                <button onclick="checkAnswer('contraction_q3', 'They\'ve been to Paris.', 'contraction_feedback3')" class="bg-[#8E24AA] hover:bg-[#D81B60] text-white font-bold py-1 px-3 rounded-lg text-sm mt-2">Check</button>
+                                <div id="contraction_feedback3" class="feedback-box hidden"></div>
                             </div>
                         </div>
                     </div>
@@ -539,11 +612,11 @@
             <div class="mt-8 p-6 bg-white rounded-lg shadow-lg">
                 <h3 class="text-xl font-bold text-[#F4511E] mb-4">Do you have any questions about the <strong>Present Perfect</strong>?</h3>
                 <p class="text-gray-700 mb-4">Type your question below, and our AI will try to help you understand!</p>
-                <textarea id="generalQuestionInput" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#FB8C00]" rows="3" placeholder="e.g., What's the difference between 'been' and 'gone'?"></textarea>
-                <button onclick="checkSentenceAI('generalQuestionInput', 'generalQuestionFeedback')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300">
+                <textarea id="aiQuestionInput" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#FB8C00]" rows="3" placeholder="e.g., What's the difference between 'been' and 'gone'?"></textarea>
+                <button onclick="askAIQuestion('aiQuestionInput', 'aiQuestionFeedback')" class="bg-[#FB8C00] hover:bg-[#F4511E] text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300">
                     Ask AI
                 </button>
-                <div id="generalQuestionFeedback" class="feedback-box hidden"></div>
+                <div id="aiQuestionFeedback" class="feedback-box hidden"></div>
             </div>
             <!-- Loading indicator for AI feedback (global) -->
             <div id="loadingIndicator" class="mt-4 text-center hidden">
@@ -556,7 +629,7 @@
 
     <script>
         // Define apiKey globally. This will be automatically populated by the Canvas environment.
-        const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU"; // API Key added here
+        const apiKey = "AIzaSyBgFTXuFT5j0kktpf6Md6lpj539Ew_AhUU";
 
         /**
          * Checks a text input field against a single correct answer.
@@ -748,6 +821,60 @@
                 feedbackOutput.classList.remove('hidden');
             } finally {
                 // Hide loading indicator regardless of success or failure
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+
+        /**
+         * Sends a general question to the Gemini API and displays a comprehensive answer.
+         * @param {string} inputId - The ID of the textarea element containing the user's question.
+         * @param {string} feedbackId - The ID of the element where the answer will be displayed.
+         */
+        async function askAIQuestion(inputId, feedbackId) {
+            const question = document.getElementById(inputId).value.trim();
+            const feedbackOutput = document.getElementById(feedbackId);
+            const loadingIndicator = document.getElementById('loadingIndicator');
+
+            if (!question) {
+                feedbackOutput.innerHTML = "Please type your question.";
+                feedbackOutput.classList.remove('hidden');
+                return;
+            }
+
+            loadingIndicator.classList.remove('hidden');
+            feedbackOutput.classList.add('hidden');
+
+            const prompt = `You are an English grammar tutor for A2/B1 learners. Answer the following question about the Present Perfect tense or general English grammar fully and clearly. Use simple language and provide examples if helpful. Explain concepts thoroughly.
+
+            Question: "${question}"`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    feedbackOutput.innerHTML = text;
+                    feedbackOutput.classList.remove('hidden');
+                } else {
+                    feedbackOutput.innerHTML = "Sorry, I couldn't answer your question right now. Please try again.";
+                    feedbackOutput.classList.remove('hidden');
+                }
+            } catch (error) {
+                feedbackOutput.innerHTML = "An error occurred while fetching the answer. Please check your connection and try again.";
+                feedbackOutput.classList.remove('hidden');
+            } finally {
                 loadingIndicator.classList.add('hidden');
             }
         }
